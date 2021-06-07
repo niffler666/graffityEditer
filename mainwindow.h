@@ -8,6 +8,8 @@
 #include "dialog_points.h"
 #include <QFile>
 #include <QMessageBox>
+#include <tochka.h>
+#include<objectfordrawing.h>
 
 #define KOL_COL 7
 #define FILE_NAME "save.dat"
@@ -33,6 +35,7 @@ public:
     ~MainWindow();
     T_OBJ_DATA * obj_data;
 
+
 private slots:
     void on_spinBox_valueChanged(int arg1);
 
@@ -40,8 +43,11 @@ private slots:
 
     void on_pushButtonLoad_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+
 
 protected slots:
     void Combo_click(int arg1);

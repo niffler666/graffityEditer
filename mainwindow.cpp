@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tableWidget->setColumnCount(KOL_COL);
     ui->tableWidget->setRowCount(0);
     obj_data=NULL;
+    ui->widget->create_image(ui->widget->width(), ui->widget->height());
 //    ui->tableWidget->setColumnWidth(1,30);
 }
 
@@ -886,6 +887,21 @@ void MainWindow::on_pushButtonLoad_clicked()
 
     file.close();
     delete [] mas;
+
+
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+//    Tochka tochka;
+//    tochka.setX(0);
+//    tochka.setY(9);
+//    tochka.setWeigt(100);
+//    tochka.setColor(255,0,0);
+//    tochka.draw(ui->widget->im);
+
+
+
 
 
 }

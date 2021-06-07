@@ -11,17 +11,27 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
+    color.cpp \
+    m_widget.cpp \
         mainwindow.cpp \
     my_color.cpp \
     my_pen.cpp \
     dialog.cpp \
-    dialog_points.cpp
+    dialog_points.cpp \
+    objectfordrawing.cpp \
+    tochka.cpp \
+    weight.cpp
 
 HEADERS  += mainwindow.h \
+    color.h \
+    m_widget.h \
     my_color.h \
     my_pen.h \
     dialog.h \
-    dialog_points.h
+    dialog_points.h \
+    objectfordrawing.h \
+    tochka.h \
+    weight.h
 
 FORMS    += mainwindow.ui \
     dialog.ui \
