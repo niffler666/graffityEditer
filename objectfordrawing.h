@@ -10,11 +10,8 @@ class ObjectForDrawing
 public:
 
 
-    virtual void draw(QImage &im)=0;
-    int getX();
-    int getY();
-    void setX(int x);
-    void setY(int y);
+    void draw(QImage &im);
+
     //void setColor(Color color);
     //Color getColor();
     int getWeight();
@@ -22,19 +19,16 @@ public:
     QPen getPen();
     QColor getColor();
     void setColor(int red,int green, int blue);
+    void setStyle(int style);
+    void setPen(QPen pen);
+    ObjectForDrawing();
 
 
 
 
 
 protected:
-    int x;
-    int y;
-    ObjectForDrawing();
-    //Color color;
-    int weight;
     QPen pen;
-    QColor color;
 
 
 };

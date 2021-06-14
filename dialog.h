@@ -3,12 +3,13 @@
 
 #include <QDialog>
 #include "my_pen.h"
+#include <objectfordrawing.h>
 
 namespace Ui {
     class Dialog;
 }
 
-class Dialog : public QDialog, public my_pen
+class Dialog : public QDialog
 {
     Q_OBJECT
 
@@ -16,7 +17,8 @@ public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
     void setStyleVisible(bool fl);
-    void setValue(my_pen n_pen);
+    ObjectForDrawing getObjectForDrawing();
+    void setValue(ObjectForDrawing n_pen);
 
 private slots:
     void on_buttonBox_accepted();
@@ -24,6 +26,7 @@ private slots:
 private:
     Ui::Dialog *ui;
     bool styleVisible;
+    ObjectForDrawing objectForDrawing;
 };
 
 #endif // DIALOG_H

@@ -4,14 +4,7 @@ ObjectForDrawing::ObjectForDrawing()
 {
 
 }
-void ObjectForDrawing:: setX(int newX)
-{
-this->x=newX;
-}
-void ObjectForDrawing:: setY(int newY)
-{
-    this->y=newY;
-}
+
 
 //void ObjectForDrawing::setColor(Color color)
 //{
@@ -23,15 +16,19 @@ void ObjectForDrawing:: setY(int newY)
 //    return this->color;
 //}
 
+void ObjectForDrawing::draw(QImage &im)
+{
+
+}
+
 int ObjectForDrawing::getWeight()
 {
-    return  this->weight;
+    return  this->pen.width();
 }
 
 void ObjectForDrawing::setWeigt(int weight)
 {
-    this->weight=weight;
-    this->pen.setWidth(this->weight);
+    this->pen.setWidth(weight);
 }
 
 QPen ObjectForDrawing::getPen()
@@ -41,23 +38,22 @@ QPen ObjectForDrawing::getPen()
 
 QColor ObjectForDrawing::getColor()
 {
-    return this->color;
+    return this->pen.color();
 }
 
 void ObjectForDrawing::setColor(int red, int green, int blue)
 {
-    this->color.setRed(red);
-    this->color.setGreen(green);
-    this->color.setBlue(blue);
-    this->color.setAlpha(255);
-    this->pen.setColor(this->color);
+    this->pen.setColor(QColor(red,green,blue,255));
 }
-int ObjectForDrawing:: getX()
+
+void ObjectForDrawing::setStyle(int style)
 {
-    return this->x;
+    this->pen.setStyle(Qt::PenStyle(style));
 }
-int ObjectForDrawing:: getY()
+
+void ObjectForDrawing::setPen(QPen pen)
 {
-    return this->y;
+    this->pen=pen;
 }
+
 

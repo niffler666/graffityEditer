@@ -11,27 +11,43 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
+    arc.cpp \
     color.cpp \
+    ellipse.cpp \
+    line.cpp \
     m_widget.cpp \
         mainwindow.cpp \
-    my_color.cpp \
     my_pen.cpp \
     dialog.cpp \
     dialog_points.cpp \
     objectfordrawing.cpp \
-    tochka.cpp \
-    weight.cpp
+    pixel.cpp \
+    polygon.cpp \
+    polyline.cpp \
+    rectangle.cpp \
+    weight.cpp \
+    zalivka.cpp \
+    my_color.cpp
+
+
 
 HEADERS  += mainwindow.h \
+    arc.h \
     color.h \
+    ellipse.h \
+    line.h \
     m_widget.h \
-    my_color.h \
     my_pen.h \
     dialog.h \
     dialog_points.h \
     objectfordrawing.h \
-    tochka.h \
-    weight.h
+    pixel.h \
+    polygon.h \
+    polyline.h \
+    rectangle.h \
+    weight.h \
+    zalivka.h \
+    my_color.h
 
 FORMS    += mainwindow.ui \
     dialog.ui \

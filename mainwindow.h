@@ -8,8 +8,14 @@
 #include "dialog_points.h"
 #include <QFile>
 #include <QMessageBox>
-#include <tochka.h>
+#include <pixel.h>
+#include <line.h>
+#include <polygon.h>
+#include <rectangle.h>
 #include<objectfordrawing.h>
+#include <ellipse.h>
+#include <arc.h>
+#include <polyline.h>
 
 #define KOL_COL 7
 #define FILE_NAME "save.dat"
@@ -20,7 +26,7 @@ namespace Ui {
 
 struct T_OBJ_DATA
 {
-    my_pen mpen;
+    ObjectForDrawing objectForDrawing;
     int kol;
     int * mas;
 };

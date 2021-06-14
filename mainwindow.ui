@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>695</width>
-    <height>410</height>
+    <width>839</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -92,10 +92,10 @@
    <widget class="m_widget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>220</y>
-      <width>601</width>
-      <height>131</height>
+      <x>60</x>
+      <y>230</y>
+      <width>741</width>
+      <height>321</height>
      </rect>
     </property>
    </widget>
@@ -105,7 +105,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>695</width>
+     <width>839</width>
      <height>21</height>
     </rect>
    </property>

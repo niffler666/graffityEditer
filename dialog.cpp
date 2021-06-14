@@ -6,8 +6,6 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
-
-
 }
 
 Dialog::~Dialog()
@@ -15,19 +13,15 @@ Dialog::~Dialog()
     delete ui;
 }
 
-void Dialog::setValue(my_pen n_pen)
+void Dialog::setValue(ObjectForDrawing objectForDrawong)
 {
-    my_style=n_pen.GetStyle();
-    n_pen.GetColor(alpha,red,green,blue);
-
-
-    ui->lineEdit_r->setText(QString::number(red));
-    ui->lineEdit_g->setText(QString::number(green));
-    ui->lineEdit_b->setText(QString::number(blue));
+    ui->lineEdit_r->setText(QString::number(objectForDrawong.getColor().red()));
+    ui->lineEdit_g->setText(QString::number(objectForDrawong.getColor().green()));
+    ui->lineEdit_b->setText(QString::number(objectForDrawong.getColor().blue()));
 
     ui->comboBox->setVisible(styleVisible);
     ui->label_st->setVisible(styleVisible);
-    ui->comboBox->setCurrentIndex(my_style);
+    ui->comboBox->setCurrentIndex(objectForDrawong.getPen().style());
 
 }
 
@@ -36,13 +30,17 @@ void Dialog::setStyleVisible(bool fl)
     styleVisible=fl;
 }
 
+ObjectForDrawing Dialog::getObjectForDrawing()
+{
+    return this->objectForDrawing;
+}
+
 void Dialog::on_buttonBox_accepted()
 {
-    int r,g,b,st;
-
-    red=ui->lineEdit_r->text().toInt();
-    green=ui->lineEdit_g->text().toInt();
-    blue=ui->lineEdit_b->text().toInt();
-
-
+    objectForDrawing.setColor(
+                ui->lineEdit_r->text().toInt(),
+                ui->lineEdit_g->text().toInt(),
+                ui->lineEdit_b->text().toInt());
+    this->objectForDrawing.setStyle(ui->comboBox->currentIndex());
+    this->objectForDrawing.setWeigt(ui->spinBox->value());
 }

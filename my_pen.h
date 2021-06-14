@@ -1,6 +1,6 @@
 #ifndef MY_PEN_H
 #define MY_PEN_H
-#include "my_color.h"
+#include <my_color.h>
 #define KOL_STYLE 5
 
 class my_pen : public my_color
